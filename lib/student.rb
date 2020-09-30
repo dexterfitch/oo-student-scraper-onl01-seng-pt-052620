@@ -4,6 +4,12 @@ class Student
 
   @@all = []
 
+  def hash_variable(hash)
+    hash.each do |key, val|
+      instance_variable_set("@#{key}", val)
+    end
+  end
+
   def initialize(student_hash)
     student_hash.each do |key, val|
       instance_variable_set("@#{key}", val)
