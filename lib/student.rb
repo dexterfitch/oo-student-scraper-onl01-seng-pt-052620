@@ -4,14 +4,14 @@ class Student
 
   @@all = []
 
-  def hash_variable(hash)
+  def hash_variables(hash)
     hash.each do |key, val|
       instance_variable_set("@#{key}", val)
     end
   end
 
   def initialize(student_hash)
-    hash_variable(student_hash)
+    hash_variables(student_hash)
 
     @@all << self
   end
@@ -23,7 +23,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    hash_variable(attributes_hash)
+    hash_variables(attributes_hash)
   end
 
   def self.all
