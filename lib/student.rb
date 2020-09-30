@@ -12,7 +12,6 @@ class Student
 
   def initialize(student_hash)
     hash_variables(student_hash)
-
     @@all << self
   end
 
