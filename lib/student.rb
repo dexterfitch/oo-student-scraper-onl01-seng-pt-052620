@@ -7,7 +7,6 @@ class Student
   def initialize(student_hash)
     binding.pry
     @name = student_hash
-    @location =
   end
 
   def self.create_from_collection(students_array)
