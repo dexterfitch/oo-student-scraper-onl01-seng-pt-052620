@@ -19,7 +19,9 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-binding.pry
+    attributes_hash.each do |key, val|
+      instance_variable_set("@#{key}", val)
+    end
   end
 
   def self.all
