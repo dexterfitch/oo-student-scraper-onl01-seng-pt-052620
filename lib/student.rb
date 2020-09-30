@@ -6,11 +6,9 @@ class Student
 
   def initialize(student_hash)
     student_hash.each do |key, val|
-binding.pry
-      # self[key] = val
+      instance_variable_set("@#{key}", val)
     end
-    # @name = student_hash[:name]
-    # @location = student_hash[:location]
+
     @@all << self
   end
 
